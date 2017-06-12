@@ -1,4 +1,4 @@
-## Decide when to retry when guzzle response is not OK
+## Decide whether to retry when guzzle response is not OK
 
 
 A service of 100 percent availability does not exist. So we must decide when to retry when a failure occurs.
