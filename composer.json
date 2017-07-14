@@ -3,7 +3,11 @@
     "description": "Decide whether to retry when guzzle response is not OK",
     "type": "library",
     "require": {
-        "guzzlehttp/guzzle": "^6.0"
+        "guzzlehttp/guzzle": "^6.0",
+        "monolog/monolog": "^1.23",
+        "ramsey/uuid": "^3.6",
+        "psr/log": "^1.0",
+        "subtlephp/ygritte": "^0.0.1"
     },
     "license": "MIT",
     "authors": [
