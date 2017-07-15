@@ -6,12 +6,16 @@
  * Time: 13:20
  */
 
-namespace Bran\GuzzleMiddleware;
 
+namespace SubtlePHP\Middlewares\Guzzle;
 
 use GuzzleHttp\Psr7\Uri;
 use Psr\Http\Message\RequestInterface;
 
+/**
+ * UriReplacer middleware for guzzlehttp/guzzle
+ * @package SubtlePHP\Middlewares\Guzzle
+ */
 class UriReplacer
 {
     public function __invoke(callable $handler)

@@ -1,11 +1,10 @@
 {
-    "name": "subtlephp/guzzle-middleware",
+    "name": "subtlephp/middlewares",
     "description": "Hook into guzzle and do what you want",
     "type": "library",
     "require": {
         "guzzlehttp/guzzle": "^6.0",
         "monolog/monolog": "^1.23",
-        "ramsey/uuid": "^3.6",
         "psr/log": "^1.0",
         "subtlephp/ygritte": "^0.0.1"
     },

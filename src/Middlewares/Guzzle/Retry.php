@@ -6,8 +6,7 @@
  * Time: 13:46
  */
 
-namespace SubtlePHP\Middlewares\GuzzleHttp;
-
+namespace SubtlePHP\Middlewares\Guzzle;
 
 use GuzzleHttp\Exception\ConnectException;
 use GuzzleHttp\Exception\RequestException;
@@ -17,7 +16,7 @@ use GuzzleHttp\Psr7\Response;
 /**
  * Retry middleware for guzzlehttp/guzzle
  *
- * @package SubtlePHP\Middlewares\GuzzleHttp
+ * @package SubtlePHP\Middlewares\Guzzle
  */
 class Retry
 {

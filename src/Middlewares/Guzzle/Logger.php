@@ -6,8 +6,7 @@
  * Time: 15:33
  */
 
-namespace Bran\GuzzleMiddleware;
-
+namespace SubtlePHP\Middlewares\Guzzle;
 
 use GuzzleHttp\Promise\RejectedPromise;
 use GuzzleHttp\TransferStats;
@@ -19,6 +18,10 @@ use Psr\Log\LoggerInterface;
 use Ramsey\Uuid\Uuid;
 use Ygritte\ContentType;
 
+/**
+ * Logger middleware for guzzlehttp/guzzle
+ * @package SubtlePHP\Middlewares\Guzzle
+ */
 class Logger
 {
     /**
@@ -94,11 +97,16 @@ class Logger
     private static function makeRpcLogger()
     {
         if (!defined('REQUEST_ID')) {
-            define('REQUEST_ID', Uuid::uuid4());
+            define('REQUEST_ID', '');
         }
+
+        if (!defined('LOG_DIR')) {
+            define('LOG_DIR', __DIR__);
+        }
+
         if (!self::$rpcLogger) {
-            $handler = new RotatingFileHandler('rpc.log');
-            $logger = new \Monolog\Logger('rpc');
+            $handler = new RotatingFileHandler(LOG_DIR . '/guzzle.log');
+            $logger = new \Monolog\Logger('guzzle');
             $formatterWithRequestId = new LineFormatter(
                 '[%datetime%] [' . REQUEST_ID . "] %channel%.%level_name%: %message% %context% %extra%\n",
                 LineFormatter::SIMPLE_DATE,
