@@ -6,7 +6,7 @@
         "guzzlehttp/guzzle": "^6.0",
         "monolog/monolog": "^1.23",
         "psr/log": "^1.0",
-        "subtlephp/ygritte": "^0.0.1"
+        "subtlephp/ygritte": "^0.0"
     },
     "license": "MIT",
     "authors": [
@@ -19,6 +19,14 @@
     "autoload": {
         "psr-4": {
             "SubtlePHP\\": "src/"
+        }
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^6.2"
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Tests\\SubtlePHP\\": "tests/"
         }
     }
 }
