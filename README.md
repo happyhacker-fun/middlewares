@@ -9,7 +9,7 @@ just tell guzzle whether to retry depending on response and when to retry after 
 
 ### Installation
 
-`composer require subtlephp/guzzle-retry-middleware`
+`composer require subtlephp/guzzle-middleware`
 
 ### Usage
 

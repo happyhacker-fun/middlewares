@@ -1,6 +1,6 @@
 {
-    "name": "subtlephp/guzzle-retry-middleware",
-    "description": "Decide whether to retry when guzzle response is not OK",
+    "name": "subtlephp/guzzle-middleware",
+    "description": "Hook into guzzle and do what you want",
     "type": "library",
     "require": {
         "guzzlehttp/guzzle": "^6.0",
